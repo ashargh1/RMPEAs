@@ -3,8 +3,7 @@ Here are the explanation for every part of the framework we developed in this st
 1) Sample Generation: To generate RMPEA samples, you need to execute SampleGeneration.ipynb. Part A generates Samples.txt that are the 50,000 samples at T=850K and part B 
 generates Samples_T.txt that includes those 50,000 samples for different tempeatures.
 
-2) Phase Labeling: To label the samples generated in the earlier step with expected phases using Thermo-CalC, you need to execute PhaseLabeling.ipynb. This code generates Phases.txt. 
-Note that we are not sharing Phases.txt and Phases_T.txt to comply with Thermo-Calc’s guidelines for sharing of calculated data.
+2) Phase Labeling: To label the samples generated in the earlier step with expected phases using Thermo-CalC, you need to execute PhaseLabeling.ipynb. This code generates Phases.txt.
 
 3) Feature Labeling: To label the samples with the 51 input features, you need to execute FeatureLabeling.ipynb. Part A generates the primary features labels.txt and then part B 
 generates the remaining ones and results labels_extra.txt that consists of both primary and secondary features. Note that to properly execute part A, you need to first create Phi.txt
