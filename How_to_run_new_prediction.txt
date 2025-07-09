@@ -1,0 +1,39 @@
+Note: This guideline outlines the steps required to use the trained model from our study to predict the phase fractions of a new refractory multi-principal element alloy (RMPEA). For 
+illustration, we use the composition Ti0.20Fe0.21Al0.05Ni0.19Zr0.35 at T = 850 K, 1000 K, and 1290 K. All the files referenced in this readme file are available in Example folder.
+ 
+Step 1: Generate the full feature set (51 features)
+1) Create Samples.txt
+Each line should represent a sample in the following format:
+[Ti, Fe, Al, V, Ni, Nb, Zr, Temp (K), Press (Pas)] (e.g., 0.20 0.21 0.05 0.00 0.19 0.00 0.35 850 100000)
+
+2) Create systems.txt
+This file should include the alloy composition for each sample in a format accepted by the ASAP code like Ti0.20Fe0.21Al0.05Ni0.19Zr0.35.
+
+3) Run the ASAP code
+Use systems.txt as input. The output, which contains the computed φ parameter for each sample, should be saved as Phi.txt with each line corresponds to the φ parameter for one 
+sample.
+
+4) Execute part A of FeatureLabeling.ipynb
+This notebook takes Samples.txt and Phi.txt as input files and generates Label.txt.
+
+5) Execute Part B of FeatureLabeling.ipynb
+This notebook produces Labels_extra.txt, where each line includes the 51 features for one sample.
+
+
+Step 2: Pre-process the features through dimensionality reduction and normalization
+1) Remove the following feature columns
+Remove columns with the following indices (0-based): [7, 9, 25, 26, 29, 34, 35, 38, 39, 40, 41, 45, 46, 47, 48, 49]
+This reduces the feature space to 35.
+
+2) Normalize the 35 features
+Use norm.npy (provided in the repository) for min-max normalization.
+This is handled in Part A of PhasePrediction.ipynb available in the Example folder.
+
+
+Step 3: Run the Model and Get Phase Predictions
+1) Execute part B of PhasePrediction.ipynb
+This notebook loads the trained model, accepts the normalized 35-feature input, and predicts the phase fractions.
+
+2) Output
+Predictions will be saved in PhasePrediction.txt, with each line formatted as:
+[Ti, Fe, Al, V, Ni, Nb, Zr, Temp, Press, FCC, BCC, HCP, B2, Laves, Sigma, Heusler, Liquid]
