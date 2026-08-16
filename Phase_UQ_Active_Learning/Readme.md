@@ -1,4 +1,4 @@
-# AI-Guided Phase Stability Prediction of Refractory Multi-Principal Element Alloys
+# Uncertainty-Aware Phase Stability Prediction of Refractory Multi-Principal Element Alloys
 
 This repository implements the complete machine learning pipeline used for phase stability prediction of refractory multi-principal element alloys (RMPEAs) using **Mixture Density Networks (MDNs)** and **uncertainty-guided active learning**.
 
