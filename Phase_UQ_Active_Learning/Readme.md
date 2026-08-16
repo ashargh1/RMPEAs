@@ -291,14 +291,13 @@ Example workflows for different sample sizes and active learning cycles are also
 
 If you use this repository, please cite:
 
-*Your paper here.*
+Shargh, A. K., Stiles, C. D., & El-Awady, J. A. (2026). Uncertainty-aware phase fraction prediction and active-learning-guided out-of-domain discovery of refractory multi-principal element alloys. arXiv preprint arXiv:2604.18322.*
 
 ---
 
 # Contact
 
-Ali Shargh
-
+Ali K. Shargh, Ph.D.
+Postdoctoral Reserach Fellow
 Johns Hopkins University
-
-LinkedIn • Google Scholar
+Email: ashargh1@jhu.edu
