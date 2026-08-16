@@ -297,7 +297,4 @@ Shargh, A. K., Stiles, C. D., & El-Awady, J. A. (2026). Uncertainty-aware phase 
 
 # Contact
 
-Ali K. Shargh, Ph.D.
-Postdoctoral Reserach Fellow
-Johns Hopkins University
 Email: ashargh1@jhu.edu
